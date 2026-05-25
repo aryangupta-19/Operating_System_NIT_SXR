@@ -26,18 +26,13 @@ int main() {
     for(int j = 0; j < n; j++) {
         int diff = abs(queue[j] - queue[j + 1]);
         seekCount += diff;
-        printf(
-            "Disk head moves from %d to %d with seek %d\n",
-            queue[j],
-            queue[j + 1],
-            diff
-        );
+        printf("Disk head moves from %d to %d with seek %d\n", queue[j], queue[j + 1], diff);
     }
 
     avg = (float) seekCount / n;
 
     printf("\nTotal seek movement: %d\n", seekCount);
     printf("Average seek time: %.2f\n", avg);
-
+    
     return 0;
 }

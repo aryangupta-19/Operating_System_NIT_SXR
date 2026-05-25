@@ -22,7 +22,7 @@ void calculateFcfs(int n, int bt[]){
         totalTat += tat[i];
     }
 
-    printf("\n        FCFS Scheduling         \n");
+    printf("\n------ FCFS Scheduling -----\n");
     printf("Process, tBurst, tWaitting, tTurnArround \n");
     for(int i =0; i<n; i++){
         printf("P%d\t%d\t%d\t%d\n", i+1, bt[i], wt[i], tat[i]);

@@ -12,8 +12,7 @@ int main()
     scanf("%d", &n);
 
     printf("Enter request sequence:\n");
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         scanf("%d", &queue[i]);
     }
 
@@ -32,10 +31,9 @@ int main()
     }
 
     int pos;
-    // find first req greater than head---> after sorting we have to find head again where to start again
+    // find first req greater than head ---> after sorting we have to find head again where to start again
     for (int i = 0; i < n; i++){
-        if (queue[i] >= head)
-        {
+        if (queue[i] >= head){
             pos = i;
             break;
         }

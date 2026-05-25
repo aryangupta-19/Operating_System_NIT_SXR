@@ -12,8 +12,7 @@ int main()
     scanf("%d", &n);
 
     printf("Enter request sequence:\n");
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         scanf("%d", &queue[i]);
     }
 
