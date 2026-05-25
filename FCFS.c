@@ -2,18 +2,16 @@
 #include <stdlib.h>
 
 int main() {
-
-    int queue[100], q_size, head;
-    int seek = 0, diff;
+    int queue[100], n, head;
+    int seekCount = 0;
     float avg;
 
     printf("Enter the number of requests: ");
-    scanf("%d", &q_size);
+    scanf("%d", &n);
 
     printf("Enter the sequence of requests:\n");
-
     // requests start from index 1
-    for(int i = 1; i <= q_size; i++) {
+    for(int i = 1; i <= n; i++) {
         scanf("%d", &queue[i]);
     }
 
@@ -25,11 +23,9 @@ int main() {
 
     printf("\nMovement sequence:\n");
 
-    for(int j = 0; j < q_size; j++) {
-
-        diff = abs(queue[j] - queue[j + 1]);
-        seek += diff;
-
+    for(int j = 0; j < n; j++) {
+        int diff = abs(queue[j] - queue[j + 1]);
+        seekCount += diff;
         printf(
             "Disk head moves from %d to %d with seek %d\n",
             queue[j],
@@ -38,9 +34,9 @@ int main() {
         );
     }
 
-    avg = (float) seek / q_size;
+    avg = (float) seekCount / n;
 
-    printf("\nTotal seek movement: %d\n", seek);
+    printf("\nTotal seek movement: %d\n", seekCount);
     printf("Average seek time: %.2f\n", avg);
 
     return 0;

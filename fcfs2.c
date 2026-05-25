@@ -1,4 +1,4 @@
-// rocess ID
+// process ID
 // Arrival Time
 // Burst Time
 // Completion Time
@@ -34,7 +34,7 @@ void calculateFcfs(int n, int bt[]){
 
 int main(){
     int n = 3;
-    int bt[] = {10, 5, 9} ;
+    int bt[] = {10, 5, 9};
     calculateFcfs(n, bt);
     return 0;
 }

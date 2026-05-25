@@ -6,9 +6,9 @@ void calculateSjf(int n, int bt[]){
         p[i] = i+1;
     }
 
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
-            if(bt[i] > bt[j]){
+    for(int i=0; i<n-1; i++){   // bubble sort   
+        for(int j=0; j<n-1-i; j++){
+            if(bt[j] > bt[j+1]){
                 // swap bt
                 temp = bt[i], bt[i] = bt[j], bt[j] = temp;
                 // swap process
